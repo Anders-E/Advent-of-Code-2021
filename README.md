@@ -26,5 +26,5 @@ My solutions to Advent of Code 2021 problems.
 |5|||
 |4|||
 |3|||
-|2|||
+|2|⭐️|⭐️|
 |1|⭐️|⭐️|
