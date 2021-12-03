@@ -1,14 +1,18 @@
 from sys import stdin
 from collections import Counter
 
+
 def star1(nums):
-    bits_by_index = list(zip(*nums)) # transpose
+    bits_by_index = list(zip(*nums))  # transpose
     bit_counts = list(map(Counter, bits_by_index))
-    gamma_bits = ['1' if count['1'] > count['0'] else '0' for count in bit_counts]
+    gamma_bits = [
+        '1' if count['1'] > count['0'] else '0' for count in bit_counts
+    ]
     gamma = int(''.join(gamma_bits), 2)
     epsilon = ~gamma & 0xFFF
 
     return gamma * epsilon
+
 
 def get_rating(nums, oxygen_rating=True):
     filtered_nums = nums[:]
@@ -23,10 +27,12 @@ def get_rating(nums, oxygen_rating=True):
         i += 1
     return int(filtered_nums[0], 2)
 
+
 def star2(nums):
     oxygen_generator_rating = get_rating(nums)
     co2_scrubber_rating = get_rating(nums, False)
     return oxygen_generator_rating * co2_scrubber_rating
+
 
 if __name__ == '__main__':
     nums = list(map(str.strip, stdin.readlines()))
