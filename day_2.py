@@ -35,7 +35,9 @@ def star2(commands):
 
 
 if __name__ == '__main__':
-    commands = [(direction, int(distance))
-                for (direction, distance) in map(str.split, stdin.readlines())]
+    commands = [
+        (direction, int(distance))
+        for (direction, distance) in map(str.split, stdin.readlines())
+    ]
     print(star1(commands), end='\n\n')
     print(star2(commands))

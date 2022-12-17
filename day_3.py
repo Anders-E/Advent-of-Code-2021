@@ -35,6 +35,6 @@ def star2(nums):
 
 
 if __name__ == '__main__':
-    nums = list(map(str.strip, stdin.readlines()))
-    print(star1(nums), end='\n\n')
-    print(star2(nums))
+    input_nums = list(map(str.strip, stdin.readlines()))
+    print(star1(input_nums), end='\n\n')
+    print(star2(input_nums))
